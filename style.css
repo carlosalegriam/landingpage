@@ -1,0 +1,156 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  text-align: right;
+  min-height: 120px;
+}
+/* Mueve imagen a la izquierda */
+header img { float: left; }
+/* selector id en imagen, cambio el tamaño, width */
+#logo {
+  width: 100px;
+}
+
+header nav {
+  background-color: #007aff;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  float: right;
+  display: flex;
+}
+/* esto es una clase .link */
+header nav .link {
+  /*border-width: 1px;*/
+  padding: 5px;
+  display: inline-block;
+  border-color: black;
+  /*border-style: solid; */
+  text-decoration: none;
+  font-family: arial;
+  border-right: 2px solid black;
+  /*display: block; */
+  /*display: inline-block; */
+  /*display: flex; */
+  /*display: none; */
+  /*background-color: ;*/
+}
+
+header nav .link:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+header nav .link:last-child {
+  border-right: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;  
+}
+
+header nav .link:hover {
+  background-color: #0054b1;
+
+}
+
+/* centrar el barner, reducir tamaño section barner mas pequeño o mas grande */
+section {
+  text-align: center;
+}
+section img {
+  width: 50%;
+}
+/* section de texto, justificación, transformación  */
+section p {
+  text-align: justify;
+  
+}
+section p span {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+/* 2 imagenes juntas */
+
+.lastimag {
+  display: flex;
+  justify-content: space-between;
+}
+.lastimag img:first-child {
+  width: 300px;
+}
+.lastimag img:last-child {
+  width: 300px;
+}
+
+/* final */
+footer {
+  font-weight: bolder;
+  text-align: center;
+  background-color: #f2f55c;
+}
+
+/* CCS para phone */
+@media only screen and (max-width: 600px) {
+  body {
+    background: green;
+  }
+   
+/*Imagenes salten hacia abajo cuando no hay suficiente espacio */
+  .lastimag {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav {
+    background-color: white;
+    float: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  header img {
+    float: none;    
+  }
+  header {    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section p {
+  text-align: justify;
+  }
+  section p span {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 40px;
+}
+ 
+}
+/* CCS para tablets */
+@media only screen and (min-width: 600px) {
+  body {
+    background: lightpink;
+  }
+
+  header nav {
+  background-color: orange;
+  }
+}
+/* CCS para laptops */
+@media only screen and (min-width: 992px) {
+  body {
+    background: skyblue;
+  }
+  header nav {
+  background-color: #007aff;
+  }
+  /*Imagenes deben ir alineadas horizontalmente */
+}
