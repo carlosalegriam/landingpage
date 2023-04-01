@@ -59,6 +59,14 @@ header nav .link:hover {
 
 }
 
+#contacto {
+  color: #241334;
+}
+
+#textocontacto {
+  color: white;
+}
+
 /* centrar el barner, reducir tamaño section barner mas pequeño o mas grande */
 section {
   text-align: center;
